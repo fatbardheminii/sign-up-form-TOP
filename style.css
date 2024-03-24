@@ -1,0 +1,72 @@
+/* General selectors */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left side -img+icon */
+.left-container {
+    width: 40%;
+    height: 100%;
+    background-image: url(images/beach.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-name {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 75px;
+    width: 100%;
+    height: 130px;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ace2e1af;
+    color: #000;
+}
+
+.palm-tree {
+   margin-right: 10px;
+   height: 70px;
+}
+
+.img-credit {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #ace2e1af;
+    color: #000000b6;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Right side - form */
+.right-container {
+    width: 60%;
+    height: 100%;
+}
