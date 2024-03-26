@@ -32,12 +32,9 @@ body {
 
 .icon-name {
     font-family: "Abril Fatface", serif;
-    font-weight: 400;
-    font-style: normal;
     margin-top: 75px;
     width: 100%;
     height: 130px;
-    font-size: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +45,11 @@ body {
 .palm-tree {
    margin-right: 10px;
    height: 70px;
+}
+
+h1 {
+    color: rgba(0, 128, 0, 0.74);
+    letter-spacing: 5px;
 }
 
 .img-credit {
@@ -63,6 +65,7 @@ body {
 span {
     text-decoration: underline;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Right side - form */
@@ -71,6 +74,82 @@ span {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    text-align: left;
+}
+
+.right-top, .right-center, .right-bottom {
+    width: 100%;
+    padding-left: 3rem;
+}
+
+.right-top {
+    height: 30%;
+    background-color: #eeedeb7a;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+}
+
+.right-center {
+    height: 40%;
+    overflow-y: scroll;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    margin: 1.25rem 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    row-gap: 1rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+label {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+input {
+    width: 300px;
+    height: 2rem;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 2px solid #B5C0D0;
+}
+
+.right-bottom {
+    height: 30%;
+    background-color: #eeedeb7a;
+    padding-top: 2rem;
+}
+
+button {
+    color: #fff;
+    background-color: #72ccca;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    word-spacing: 5px;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all ease-in .5s;
+}
+
+button:hover {
+    background-color: #184e4d;
+}
+
+.right-bottom p {
+    font-size: 1.25rem;
 }
