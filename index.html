@@ -28,35 +28,52 @@
         <div class="right-top">
           <h4>
             This is not a real online service! You know you need something
-            like this in your life to help you realize your deepest dreams.             Sign up now to get started. <br><br>
+            like this in your life to help you realize your deepest dreams. Sign up now to get started. <br><br>
             You know you want to.</h4>
+            <h5>All fields marked with * are obligatory</h5>
         </div>
         <div class="right-center">
           <h3>Let's do this!</h3>
           <form action="" method="" id="sign-up">
             <div class="box">
-              <label for="first-name">First name</label>
-              <input type="text" name="first-name" id="first-name">
+              <label for="first-name">First name<span aria-label="required">*</span></label>
+              <input type="text" name="first-name" id="first-name" placeholder="John" minlength="2" maxlength="20" required autocomplete="name">
+              <p class="error-msg hidden">Minlength 2 characters</p>
             </div>
             <div class="box">
-              <label for="last-name">Last name</label>
-              <input type="text" name="last-name" id="last-name">
+              <label for="last-name">Last name<span aria-label="required">*</span></label>
+              <input type="text" name="last-name" id="last-name" required autocomplete="family-name" placeholder="Doe" minlength="2" maxlength="20">
+              <p class="error-msg hidden">Minlength 2 characters</p>
             </div>
             <div class="box">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email">
+              <label for="email">Email<span aria-label="required">*</span></label>
+              <input type="email" name="email" id="email" required autocomplete="email" placeholder="john.doe@gmail.com" 
+              pattern="^[a-zA-Z0-9\.\-_]{2,}@[a-zA-Z0-9\.\-]{2,}\.[a-zA-Z]{2,}$" 
+              title="Valid email: &#10;1. Only one @, at least one dot (.) &#10;2. Only (-_.) symbols allowed &#10;3. At least 2 characters before and after @ and the last dot (.)">
+              <p class="error-msg hidden">Provide valid email: <br> 1. Only one @, at least one dot (.)  <br> 2. Only (-_.) symbols allowed 
+               <br> 3. At least 2 characters before and after @ and the last dot (.) </p>
             </div>
             <div class="box">
-              <label for="phone">Phone number</label>
-              <input type="tel" name="phone" id="phone">
+              <label for="phone">Phone number<span aria-label="required">*</span></label>
+              <input type="tel" name="phone" id="phone" required autocomplete="tel" placeholder="044123123" pattern="\d{9}" 
+              title="Please enter a valid phone number (e.g., 044-333-212)&#10;Minlength 9 digits &#10;No whitespace or hyphens(-)" minlength="9" maxlength="9">
+              <p class="error-msg hidden">Provide valid tel number: <br> Minlength 9 digits <br>No whitespace or hyphens(-)</p>
             </div>
             <div class="box">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password">
+              <label for="password">Password<span aria-label="required">*</span></label>
+              <input type="password" name="password" id="password" required autocomplete="new-password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$" 
+              title="Password must contain at least 1 number, 1 lowercase letter, 1 uppercase letter, 1 symbol, and be at least 8 characters long">
+              <p class="error-msg hidden">Password must contain: <br></p>
+              <li class="hidden minlength">At least 8 characters</li>
+              <li class="hidden upcs-l">At least 1 uppercase letter</li>
+              <li class="hidden lwcs-l">At least 1 lowercase letter</li>
+              <li class="hidden num">At least 1 number</li>
+              <li class="hidden sym">At least 1 symbol</li>
             </div>
             <div class="box">
-              <label for="confirm-password">Confirm password</label>
-              <input type="password" name="confirm-password" id="confirm-password">
+              <label for="confirm-password">Confirm password<span aria-label="required">*</span></label>
+              <input type="password" name="confirm-password" id="confirm-password" required autocomplete="new-password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$">
+              <p class="error-msg hidden" id="confirm-msg">Password doesn't match</p>
             </div>
           </form>
         </div>

@@ -86,18 +86,24 @@ span {
     height: 30%;
     background-color: #eeedeb7a;
     display: flex;
-    align-items: flex-end;
-    padding-bottom: 4rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+}
+h5 {
+    margin-top: 2.5rem;
 }
 
 .right-center {
-    height: 40%;
+    height: 45%;
     overflow-y: scroll;
     padding-bottom: 1rem;
+    background-color: #ace2e1af;
 }
 
 h3 {
-    margin: 1.25rem 0;
+    margin: 1.25rem 0 2rem;
 }
 
 form {
@@ -117,6 +123,50 @@ label {
     text-transform: uppercase;
 }
 
+label span {
+    text-decoration: none;
+    font-weight: normal;
+    cursor: default;
+}
+
+input:valid {
+    border: 2px solid rgb(102, 233, 102);
+    background: url(images/circle-check-regular.svg) no-repeat;
+    background-position: right 3px top 3px;
+    background-size: 1.25rem;
+    padding-right: 10px;
+    transition: all ease-in .25S;
+}
+
+input:user-invalid {
+    border: 2px solid rgb(230, 90, 101);
+    background: url(images/circle-xmark-regular.svg) no-repeat;
+    background-position: right 3px top 3px;
+    background-size: 1.25rem;
+    transition: all ease-in .25S;
+}
+
+#invalid-conf-pw {
+    border: 2px solid rgb(230, 90, 101);
+    background: url(images/circle-xmark-regular.svg) no-repeat;
+    background-position: right 3px top 3px;
+    background-size: 1.25rem;
+    transition: all ease-in .25S;
+}
+
+input:focus + .error-msg, 
+input:user-invalid + .error-msg {
+    display: block;
+}
+
+input:valid + .error-msg {
+    display: none;
+}
+
+input:focus ~ li {
+    display: inline-block;
+}
+
 input {
     width: 300px;
     height: 2rem;
@@ -125,8 +175,22 @@ input {
     border: 2px solid #B5C0D0;
 }
 
+.error-msg {
+    font-size: 1.25rem;
+    color: rgb(230, 90, 101);
+}
+
+li {
+    font-size: 1.25rem;
+    color: rgb(230, 90, 101);
+}
+
+.hidden {
+    display: none;
+}
+
 .right-bottom {
-    height: 30%;
+    height: 25%;
     background-color: #eeedeb7a;
     padding-top: 2rem;
 }
